@@ -1,5 +1,5 @@
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
   Navigate,
 } from 'react-router-dom';
@@ -8,7 +8,7 @@ import SaveTheDate from './SaveTheDate';
 import './App.css';
 
 function App() {
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       path: 'save-the-date',
       element: <SaveTheDate />,
