@@ -1,7 +1,7 @@
-name: Publish
+name: Publish (Staging)
 on: workflow_dispatch
 jobs:
-  deploy:
+  publish:
     name: Upload to Amazon S3
     runs-on: ubuntu-latest
     permissions:
@@ -10,6 +10,7 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+    - run: npm ci
     - run: npm run build
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
