@@ -1,5 +1,8 @@
 name: Publish (Staging)
-on: workflow_dispatch
+on:
+  push:
+    branches:    
+      - main
 jobs:
   publish:
     name: Upload to Amazon S3
