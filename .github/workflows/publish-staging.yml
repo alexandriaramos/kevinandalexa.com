@@ -21,3 +21,4 @@ jobs:
         role-to-assume: ${{ secrets.IAM_ROLE }}
         aws-region: us-east-1
     - run: aws s3 sync ./build s3://staging.kevinandalexa.com
+    - run: aws cloudfront create-invalidation --distribution-id E3RMFK07D09F6O --paths '/*'
