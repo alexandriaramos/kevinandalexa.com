@@ -16,7 +16,7 @@ function SaveTheDate() {
         <SwiperSlide key={key}>
           <Card
             title="kevin + alexa"
-            type="we're getting married"
+            type="save the date"
             description="january 13, 2024"
           />
         </SwiperSlide>
